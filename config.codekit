@@ -272,6 +272,28 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/images\/pattern-invert.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 20171,
+		"inputAbbreviatedPath": "\/images\/pattern-invert.png",
+		"outputAbbreviatedPath": "\/images\/pattern-invert.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/pattern.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 26581,
+		"inputAbbreviatedPath": "\/images\/pattern.png",
+		"outputAbbreviatedPath": "\/images\/pattern.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/jade\/_layout.jade": {
 		"compileDebug": 1,
 		"fileType": 512,

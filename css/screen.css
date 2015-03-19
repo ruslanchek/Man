@@ -5099,10 +5099,38 @@ input[type="radio"] {
     opacity: 0.75; }
 
 body {
-  background-color: #E0E6E7; }
+  background: #E0E6E7 url(../images/pattern.png) top center; }
 
-.top .logo {
-  background: url(../images/logo.svg);
-  display: block;
-  width: 33px;
-  height: 30px; }
+.top {
+  background-color: #fff;
+  height: 60px;
+  line-height: 60px; }
+  .top aside {
+    background-color: #525d73; }
+  .top .logo {
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    padding-left: 70px;
+    color: #fff;
+    display: block;
+    height: 60px;
+    line-height: 60px;
+    background-color: #525d73;
+    -webkit-transition: 0.15s;
+            transition: 0.15s; }
+    .top .logo:hover {
+      background-color: #4d586e; }
+    .top .logo:after {
+      content: "";
+      background: url(../images/logo.svg);
+      display: block;
+      width: 33px;
+      height: 30px;
+      position: absolute;
+      top: 50%;
+      margin-top: -15px;
+      left: 20px; }
+
+.middle aside {
+  background-color: #5C677D; }

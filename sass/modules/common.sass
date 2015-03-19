@@ -1,10 +1,42 @@
 body
-	background-color: $ui-gray-bg
+	background: $ui-gray-bg url(../images/pattern.png) top center
 
 .top
-	.logo
-		background: url(../images/logo.svg)
-		display: block
-		width: 33px
-		height: 30px
+	$height: 60px
 
+	background-color: #fff
+	height: $height
+	line-height: $height
+
+	aside
+		background-color: $ui-night-dark-bg - 10
+
+	.logo
+		font-size: 18px
+		font-weight: bold
+		position: relative
+		padding-left: 70px
+		color: #fff
+		display: block
+		height: $height
+		line-height: $height
+		background-color: $ui-night-dark-bg - 10
+		transition: $animation-component-duration
+
+		&:hover
+			background-color: $ui-night-dark-bg - 15
+
+		&:after
+			content: ''
+			background: url(../images/logo.svg)
+			display: block
+			width: 33px
+			height: 30px
+			position: absolute
+			top: 50%
+			margin-top: -15px
+			left: $padding-component-side
+
+.middle
+	aside
+		background-color: $ui-night-dark-bg
