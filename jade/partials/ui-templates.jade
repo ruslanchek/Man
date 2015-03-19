@@ -1,0 +1,38 @@
+script(type="text/x-handlebars-template")#template-ui-popup
+	.popup(id="{{_id}}", class="{{overlay}}")
+		.overlay
+		.window
+			a.close(href="#") 
+				i.fa.fa-close
+					
+			.title
+				.text {{title}}
+				.wait-indicator
+				
+			.messages
+			.content {{content}}
+
+script(type="text/x-handlebars-template")#template-ui-popup-message
+	.message(class="{{className}}") {{content}}
+
+script(type="text/x-handlebars-template")#template-ui-fullscreen
+	.fullscreen
+		.overlay
+		.loading
+			.animation.tween-spin
+		.window
+			.limiter
+				.viewport
+					
+script(type="text/x-handlebars-template")#template-ui-fullscreen-content
+	h3.title {{title}}
+		p.subtitle {{subtitle}}
+
+	a.close(href="#") &times;
+
+	.grid
+		.col-18
+			.content {{content}}
+
+		.col-6
+			.toolbar {{toolbar}}

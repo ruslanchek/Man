@@ -1,0 +1,32 @@
+extends _layout
+
+block content
+	- var section = 'checkers'
+
+	.grid
+		.col-6
+			include ./partials/leftcol.jade
+
+		.col-18
+			h1 Checkers
+
+			+breadcrumbs([
+				['components', 'Components'],
+				['checkers', 'Checkers']
+			])
+
+			h2 Useful checkers
+			p Everybody loves checkboxes, but everybody wants some other thing
+
+			.checker#sample-checker
+				a.active(href="#") Activated checker
+				a.text-center(href="#", data-active-class="bg-mid-dark"): i.fa.fa-facebook
+				a.text-center(href="#", data-active-class="bg-heat-light"): i.fa.fa-google-plus
+				a.text-center(href="#", data-active-class="bg-cold-dark"): i.fa.fa-twitter
+				a.text-center(href="#", data-active-class="bg-mid-light"): i.fa.fa-vk
+				a.text-center(href="#", data-active-class="bg-heat-dark"): i.fa.fa-youtube
+				a(href="#", data-toggled-content="On") Off
+
+			.grid.marginless
+				include partials/code
+				include partials/colorable

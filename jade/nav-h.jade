@@ -1,0 +1,51 @@
+extends _layout
+
+block content
+	- var section = 'nav-h'
+
+	.grid
+		.col-6
+			include ./partials/leftcol.jade
+
+		.col-18
+			h1 Horizontal navigation
+
+			+breadcrumbs([
+				['components', 'Components'],
+				['nav-h', 'Horizontal navigation']
+			])
+
+			h2 Default horizontal navigation
+			p Can be bordered, filled or simple inline links
+
+			.grid
+				.col-18
+					nav.nav.fat.bordered.horizontal
+						a.active(href="#stayhere") Letter
+						a(href="#stayhere") Word
+						a(href="#stayhere") Expression
+						a(href="#stayhere") Article
+						a(href="#stayhere") Tale
+
+			.grid
+				.col-18
+					nav.nav.fat.filled.bg-cold-light.bevel.horizontal
+						a(href="#stayhere") Letter
+						a(href="#stayhere") Word
+						a.active(href="#stayhere") Expression
+						a(href="#stayhere") Article
+						a(href="#stayhere") Tale
+
+			.grid
+				.col-18
+					nav.nav.fat.horizontal
+						a(href="#stayhere") Letter
+						a(href="#stayhere") Word
+						a(href="#stayhere") Expression
+						a(href="#stayhere") Article
+						a.active(href="#stayhere") Tale
+
+			.grid.marginless
+				include partials/code
+				include partials/colorable
+				include partials/resizeable

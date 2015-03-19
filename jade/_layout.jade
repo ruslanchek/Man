@@ -1,0 +1,17 @@
+doctype html
+html
+	include _mixins
+	include partials/head
+
+	body
+		.wrap
+			main
+				.limiter
+					include partials/header
+
+					block content
+			.push
+
+		include partials/footer
+		include partials/ui-templates
+		include partials/demo-templates
