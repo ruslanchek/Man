@@ -297,7 +297,7 @@
 	"\/jade\/partials\/head.jade": {
 		"compileDebug": 1,
 		"fileType": 512,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/jade\/partials\/head.jade",
 		"outputAbbreviatedPath": "\/head.html",
@@ -308,7 +308,7 @@
 	"\/jade\/partials\/ui-templates.jade": {
 		"compileDebug": 1,
 		"fileType": 512,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/jade\/partials\/ui-templates.jade",
 		"outputAbbreviatedPath": "\/ui-templates.html",
@@ -1285,7 +1285,7 @@
 	},
 "hooks": [
 	],
-"lastSavedByUser": "Ruslan Shashkov",
+"lastSavedByUser": "Ruslan",
 "manualImportLinks": {
 	},
 "projectAttributes": {

@@ -5097,3 +5097,12 @@ input[type="radio"] {
     opacity: 0.55; }
   .alert.fade.attention {
     opacity: 0.75; }
+
+body {
+  background-color: #E0E6E7; }
+
+.top .logo {
+  background: url(../images/logo.svg);
+  display: block;
+  width: 33px;
+  height: 30px; }
