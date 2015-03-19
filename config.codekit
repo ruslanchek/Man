@@ -642,22 +642,6 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/sass\/code.scss": {
-		"createSourceMap": 0,
-		"debugStyle": 0,
-		"decimalPrecision": 10,
-		"fileType": 4,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/sass\/code.scss",
-		"outputAbbreviatedPath": "\/css\/code.css",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"shouldRunAutoprefixer": 1,
-		"shouldRunBless": 0,
-		"useLibsass": 0
-		},
 	"\/sass\/common\/grid.scss": {
 		"createSourceMap": 1,
 		"debugStyle": 0,
@@ -1058,22 +1042,6 @@
 		"shouldRunBless": 0,
 		"useLibsass": false
 		},
-	"\/sass\/demo.sass": {
-		"createSourceMap": 1,
-		"debugStyle": 0,
-		"decimalPrecision": 10,
-		"fileType": 2,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/sass\/demo.sass",
-		"outputAbbreviatedPath": "\/css\/demo.css",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"shouldRunAutoprefixer": 1,
-		"shouldRunBless": 0,
-		"useLibsass": false
-		},
 	"\/sass\/font-awesome\/_animated.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
@@ -1281,6 +1249,22 @@
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
 		"useLibsass": 0
+		},
+	"\/sass\/modules\/common.sass": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 2,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/sass\/modules\/common.sass",
+		"outputAbbreviatedPath": "\/css\/common.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": false
 		},
 	"\/sass\/screen.sass": {
 		"createSourceMap": 0,
