@@ -146,6 +146,8 @@ main
 				width: $width-company
 
 		.selector
+			$height: 32px
+
 			float: left
 			height: $height-top
 			line-height: $height-top
@@ -190,8 +192,6 @@ main
 				color: $header-input-color-icon
 
 			.drop
-				$height: 32px
-
 				height: 0
 				opacity: 0
 				position: absolute
@@ -204,8 +204,6 @@ main
 				box-shadow: 0 2px 2px rgba(0, 0, 0, .1)
 				overflow: hidden
 				transition: all .1s
-				height: $height * 5
-				opacity: 1
 
 				.drop-inner
 					ul
@@ -222,6 +220,12 @@ main
 							&:hover
 								background: $color-cold-light
 								color: #fff
+
+			&:hover,
+			.opened
+				.drop
+					opacity: 1
+					height: $height * 5
 
 		.divider-left,
 		.divider-right
