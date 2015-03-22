@@ -1,42 +1,26 @@
 body
-	background: $ui-gray-bg url(../images/pattern.png) top center
+	background: #ECF0F1 - 10 url(../images/pattern.png) top center
 
-.top
-	$height: 60px
+.app
+	background-color: #ECF0F1
+	position: relative
+	z-index: 2
+	+clearfix
 
-	background-color: #fff
-	height: $height
-	line-height: $height
+aside
+	background-color: #485D70
+	height: 100vh
+	width: 22%
+	float: left
 
-	aside
-		background-color: $ui-night-dark-bg - 10
+	+breakpoint($bp-iphone)
+		float: none
+		width: 100%
 
-	.logo
-		font-size: 18px
-		font-weight: bold
-		position: relative
-		padding-left: 70px
-		color: #fff
-		display: block
-		height: $height
-		line-height: $height
-		background-color: $ui-night-dark-bg - 10
-		transition: $animation-component-duration
+main
+	width: 78%
+	float: left
 
-		&:hover
-			background-color: $ui-night-dark-bg - 15
-
-		&:after
-			content: ''
-			background: url(../images/logo.svg)
-			display: block
-			width: 33px
-			height: 30px
-			position: absolute
-			top: 50%
-			margin-top: -15px
-			left: $padding-component-side
-
-.middle
-	aside
-		background-color: $ui-night-dark-bg
+	+breakpoint($bp-iphone)
+		float: none
+		width: 100%

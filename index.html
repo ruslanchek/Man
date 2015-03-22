@@ -12,44 +12,39 @@
     <script src="/js/demo.js"></script>
   </head>
   <body>
-    <div class="top">
-      <div class="limiter">
-        <header>
-          <div class="grid">
-            <div class="col-6">
-              <aside> <a href="#" class="logo">Менеджер</a></aside>
-            </div>
-            <div class="col-18">
-              <section>123</section>
-            </div>
-          </div>
-        </header>
-      </div>
-    </div>
-    <div class="middle">
-      <div class="limiter">
-        <div class="grid">
-          <div class="col-6">
-            <aside>323</aside>
-          </div>
-          <div class="col-18">
-            <main>222</main>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="bottom">
-      <div class="limiter">
-        <footer>
-          <div class="grid">
-            <div class="col-6">
-              <aside>123</aside>
-            </div>
-            <div class="col-18">
-              <section>123</section>
-            </div>
-          </div>
-        </footer>
+    <div class="limiter">
+      <div class="app">
+        <aside>
+          <header><a href="#" class="logo">Менеджер</a></header>
+          <section>
+            <nav class="nav-main"><a href="#"><i class="fa fa-share"></i>Счета</a><a href="#"><i class="fa fa-reply"></i>Счета-фактуры</a><a href="#" class="active"><i class="fa fa-th-list"></i>Накладные</a><a href="#"><i class="fa fa-check"></i>Акты</a><a href="#"><i class="fa fa-suitcase"></i>Договоры</a><a href="#"><i class="fa fa-folder-open"></i>Номенклатура</a><a href="#"><i class="fa fa-users"></i>Контрагенты</a><a href="#"><i class="fa fa-rub"></i>Финансы</a><a href="#"><i class="fa fa-envelope"></i>Уведомления<span class="new">3</span></a></nav>
+          </section>
+          <footer></footer>
+        </aside>
+        <main>
+          <header>
+            <form class="search divider-right"><i class="fa fa-search"></i>
+              <input type="text" placeholder="Поиск" class="custom">
+            </form>
+            <div class="selector user divider-right"><i class="arrow fa fa-angle-down"></i>
+              <div class="title"><i class="fa fa-user"></i>rshashkov</div>
+              <div class="drop">
+                <div class="drop-inner">
+                  <ul>
+                    <li>Биллинг</li>
+                    <li>Личные настройки</li>
+                    <li>Команда</li>
+                    <li>Отправить приглашение</li>
+                    <li>Сменить пароль</li>
+                  </ul>
+                </div>
+              </div>
+            </div><a title="Настройка" href="#" class="btn-wide company divider-right"><i class="fa fa-cog"></i>ООО &laquo;Информационные системы Люкс&raquo;</a>
+            <div class="btn-group"><a title="Настройка" href="#" class="btn divider-right"><i class="fa fa-cog"></i></a><a id="exit" title="Выход" href="#" class="btn divider-right"><i class="fa fa-power-off"></i></a></div>
+          </header>
+          <section>333</section>
+          <footer>23123</footer>
+        </main>
       </div>
     </div>
     <script type="text/x-handlebars-template" id="template-ui-popup">

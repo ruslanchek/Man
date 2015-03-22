@@ -254,6 +254,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/css\/modules\/header.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/css\/modules\/header.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/css\/print.css": {
 		"fileType": 16,
 		"ignore": 1,
@@ -1064,6 +1073,15 @@
 		"shouldRunBless": 0,
 		"useLibsass": false
 		},
+	"\/sass\/css\/nav-main.css": {
+		"fileType": 16,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/sass\/css\/nav-main.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/sass\/font-awesome\/_animated.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
@@ -1288,6 +1306,38 @@
 		"shouldRunBless": 0,
 		"useLibsass": false
 		},
+	"\/sass\/modules\/header.sass": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 2,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/sass\/modules\/header.sass",
+		"outputAbbreviatedPath": "\/css\/header.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": false
+		},
+	"\/sass\/modules\/nav-main.sass": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 2,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/sass\/modules\/nav-main.sass",
+		"outputAbbreviatedPath": "\/css\/nav-main.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": false
+		},
 	"\/sass\/screen.sass": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
@@ -1307,7 +1357,7 @@
 	},
 "hooks": [
 	],
-"lastSavedByUser": "Ruslan",
+"lastSavedByUser": "Ruslan Shashkov",
 "manualImportLinks": {
 	},
 "projectAttributes": {

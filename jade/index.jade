@@ -1,33 +1,76 @@
 extends _layout
 	
 block content
-	.top
-		.limiter
-			header
-				.grid
-					.col-6
-						aside 
-							a.logo(href="#") Менеджер
+	.limiter
+		.app
+			aside
+				header
+					a.logo(href="#") Менеджер
 
-					.col-18
-						section 123
+				section
+					nav.nav-main
+						a(href="#")
+							i.fa.fa-share
+							|Счета
+						a(href="#")
+							i.fa.fa-reply
+							|Счета-фактуры
+						a.active(href="#")
+							i.fa.fa-th-list
+							|Накладные
+						a(href="#")
+							i.fa.fa-check
+							|Акты
+						a(href="#")
+							i.fa.fa-suitcase
+							|Договоры
+						a(href="#")
+							i.fa.fa-folder-open
+							|Номенклатура
+						a(href="#")
+							i.fa.fa-users
+							|Контрагенты
+						a(href="#")
+							i.fa.fa-rub
+							|Финансы
+						a(href="#")
+							i.fa.fa-envelope
+							|Уведомления
+							span.new 3
 
-	.middle
-		.limiter
-			.grid
-				.col-6
-					aside 323
+				footer
+		
+			main
+				header
+					form.search.divider-right
+						i.fa.fa-search
+						input.custom(type="text", placeholder="Поиск")
 
-				.col-18
-					main 222
+					.selector.user.divider-right
+						i.arrow.fa.fa-angle-down
+						.title
+							i.fa.fa-user
+							|rshashkov
+						.drop
+							.drop-inner
+								ul
+									li Биллинг
+									li Личные настройки
+									li Команда
+									li Отправить приглашение
+									li Сменить пароль
+
+					a.btn-wide.company.divider-right(title="Настройка", href="#")
+						i.fa.fa-cog
+						|ООО &laquo;Информационные системы Люкс&raquo;
 
 
-	.bottom
-		.limiter
-			footer
-				.grid
-					.col-6
-						aside 123
+					.btn-group
+						a.btn.divider-right(title="Настройка", href="#")
+							i.fa.fa-cog
 
-					.col-18
-						section 123
+						a#exit.btn.divider-right(title="Выход", href="#")
+							i.fa.fa-power-off
+
+				section 333
+				footer 23123
