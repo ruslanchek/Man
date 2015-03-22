@@ -16,11 +16,6 @@ $height-top: 48px
 	&:hover
 		background: rgba(0, 0, 0, .02)
 
-	&:focus
-		background: rgba(0, 0, 0, .04)
-		transition: background .1s
-		+box-sizing(border-box)
-
 	.fa
 		color: $header-input-color
 		transition: color .1s
@@ -132,9 +127,23 @@ main
 			&#exit:hover .fa
 				color: $color-heat-light
 
-			&.btn-wide
-				&.company
-					width: $width-company
+		.btn-wide
+			padding: 0 17px
+			white-space: nowrap
+			text-overflow: ellipsis
+			overflow: hidden
+			color: $header-input-color
+			display: block
+			float: left
+			height: $height-top
+			line-height: $height-top
+			+header-input-effects
+
+			.fa
+				margin-right: 10px
+
+			&.company
+				width: $width-company
 
 		.selector
 			float: left
@@ -144,7 +153,6 @@ main
 			padding: 0 35px 0 17px
 			box-sizing: border-box
 			cursor: pointer
-			padding: 0 35px 0 17px
 			box-sizing: border-box
 			cursor: pointer
 			user-select: none 

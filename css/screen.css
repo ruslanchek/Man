@@ -5225,11 +5225,6 @@ main header {
       font-family: "PT Sans", sans-serif; }
       main header .search input:hover {
         background: rgba(0, 0, 0, 0.02); }
-      main header .search input:focus {
-        background: rgba(0, 0, 0, 0.04);
-        -webkit-transition: background 0.1s;
-                transition: background 0.1s;
-        box-sizing: border-box; }
       main header .search input .fa {
         color: #656d77;
         -webkit-transition: color 0.1s;
@@ -5266,11 +5261,6 @@ main header {
     font-family: "PT Sans", sans-serif; }
     main header .btn:hover {
       background: rgba(0, 0, 0, 0.02); }
-    main header .btn:focus {
-      background: rgba(0, 0, 0, 0.04);
-      -webkit-transition: background 0.1s;
-              transition: background 0.1s;
-      box-sizing: border-box; }
     main header .btn .fa {
       color: #656d77;
       -webkit-transition: color 0.1s;
@@ -5284,7 +5274,34 @@ main header {
               transition: color 0.1s; }
     main header .btn#exit:hover .fa {
       color: #fc6d58; }
-    main header .btn.btn-wide.company {
+  main header .btn-wide {
+    padding: 0 17px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: #656d77;
+    display: block;
+    float: left;
+    height: 48px;
+    line-height: 48px;
+    height: 48px;
+    box-sizing: border-box;
+    -webkit-transition: background 0.1s;
+            transition: background 0.1s;
+    font-family: "PT Sans", sans-serif; }
+    main header .btn-wide:hover {
+      background: rgba(0, 0, 0, 0.02); }
+    main header .btn-wide .fa {
+      color: #656d77;
+      -webkit-transition: color 0.1s;
+              transition: color 0.1s; }
+    main header .btn-wide:hover .fa {
+      color: #5b636d; }
+    main header .btn-wide .title:hover {
+      color: #5b636d; }
+    main header .btn-wide .fa {
+      margin-right: 10px; }
+    main header .btn-wide.company {
       width: 35%; }
   main header .selector {
     float: left;
@@ -5294,7 +5311,6 @@ main header {
     padding: 0 35px 0 17px;
     box-sizing: border-box;
     cursor: pointer;
-    padding: 0 35px 0 17px;
     box-sizing: border-box;
     cursor: pointer;
     -webkit-user-select: none;
@@ -5308,11 +5324,6 @@ main header {
     font-family: "PT Sans", sans-serif; }
     main header .selector:hover {
       background: rgba(0, 0, 0, 0.02); }
-    main header .selector:focus {
-      background: rgba(0, 0, 0, 0.04);
-      -webkit-transition: background 0.1s;
-              transition: background 0.1s;
-      box-sizing: border-box; }
     main header .selector .fa {
       color: #656d77;
       -webkit-transition: color 0.1s;
