@@ -149,7 +149,10 @@ main
 			+breakpoint($bp-iphone)
 				width: $height-top-iphone * 2
 				height: $height-top-iphone
-				color: #fff
+
+			.fa
+				+breakpoint($bp-iphone)
+					color: #fff
 
 		.btn
 			float: left
@@ -255,6 +258,9 @@ main
 				margin-top: -12px
 				font-size: 22px
 				color: $header-input-color-icon
+
+				+breakpoint($bp-iphone)
+					right: 22px
 
 			.drop
 				height: 0

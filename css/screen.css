@@ -5333,7 +5333,9 @@ main header {
     @media (min-width: 0) and (max-width: 569px) {
       main header .btn-group {
         width: 116px;
-        height: 58px;
+        height: 58px; } }
+    @media (min-width: 0) and (max-width: 569px) {
+      main header .btn-group .fa {
         color: #fff; } }
   main header .btn {
     float: left;
@@ -5480,6 +5482,9 @@ main header {
       margin-top: -12px;
       font-size: 22px;
       color: #656d77; }
+      @media (min-width: 0) and (max-width: 569px) {
+        main header .selector .arrow {
+          right: 22px; } }
     main header .selector .drop {
       height: 0;
       opacity: 0;
