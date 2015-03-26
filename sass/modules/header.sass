@@ -67,7 +67,7 @@ aside
 			+breakpoint($bp-iphone)
 				height: $height-top-iphone
 				line-height: $height-top-iphone
-				font-size: 24px
+				font-size: 22px
 
 			&:hover
 				background-color: #2F4457 + 15
@@ -150,9 +150,9 @@ main
 				width: $height-top-iphone * 2
 				height: $height-top-iphone
 
-			.fa
-				+breakpoint($bp-iphone)
-					color: #fff
+				.fa
+					+breakpoint($bp-iphone)
+						color: #fff !important
 
 		.btn
 			float: left
@@ -174,9 +174,9 @@ main
 			&#exit 
 				&:hover
 					.fa
-						color: $color-heat-light - 15
+						color: $color-heat-light - 15 !important
 				.fa
-					color: $color-heat-light
+					color: $color-heat-light !important
 
 		.btn-wide
 			padding: 0 17px

@@ -5239,7 +5239,7 @@ aside header {
       aside header .logo {
         height: 58px;
         line-height: 58px;
-        font-size: 24px; } }
+        font-size: 22px; } }
     aside header .logo:hover {
       background-color: #3e5366; }
     aside header .logo:after {
@@ -5334,9 +5334,10 @@ main header {
       main header .btn-group {
         width: 116px;
         height: 58px; } }
-    @media (min-width: 0) and (max-width: 569px) {
-      main header .btn-group .fa {
-        color: #fff; } }
+  @media (min-width: 0) and (max-width: 569px) and (min-width: 0) and (max-width: 569px) {
+    main header .btn-group .fa {
+      color: #fff !important; } }
+
   main header .btn {
     float: left;
     width: 48px;
@@ -5371,9 +5372,9 @@ main header {
       -webkit-transition: color 0.1s;
               transition: color 0.1s; }
     main header .btn#exit:hover .fa {
-      color: #ed5e49; }
+      color: #ed5e49 !important; }
     main header .btn#exit .fa {
-      color: #fc6d58; }
+      color: #fc6d58 !important; }
   main header .btn-wide {
     padding: 0 17px;
     white-space: nowrap;
