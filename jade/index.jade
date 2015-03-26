@@ -39,15 +39,15 @@ block content
 							span.new 3
 
 					.notifications
-						.item
+						a.item(href="#")
 							.body Вам пришло личное сообщение от ООО &laquo;Гармония&raquo;
 							.date Сегодня, в 14:33
 
-						.item
+						a.item(href="#")
 							.body Добавлен новый товар в нометклатуру
 							.date Сегодня, в 8:12
 							
-						.item
+						a.item(href="#")
 							.body Удалена категория нометклатуры
 							.date Сегодня, в 7:41
 
@@ -60,11 +60,15 @@ block content
 						i.fa.fa-search
 						input.custom(type="text", placeholder="Поиск")
 
+					a.btn-wide.company.divider-right(title="Настройка", href="#")
+						i.fa.fa-building
+						|ООО &laquo;Информационные системы 2000&raquo;
+
 					.selector.user.divider-right
 						i.arrow.fa.fa-angle-down
 						.title
 							i.fa.fa-user
-							|rshashkov
+							| rshashkov
 						.drop
 							.drop-inner
 								ul
@@ -74,16 +78,11 @@ block content
 									li Отправить приглашение
 									li Сменить пароль
 
-					a.btn-wide.company.divider-right(title="Настройка", href="#")
-						i.fa.fa-building
-						|ООО &laquo;Информационные системы 2000&raquo;
-
-
 					.btn-group
 						a.btn.divider-right(title="Настройка", href="#")
 							i.fa.fa-cog
 
-						a#exit.btn.divider-right(title="Выход", href="#")
+						a#exit.btn(title="Выход", href="#")
 							i.fa.fa-power-off
 
 				section Section

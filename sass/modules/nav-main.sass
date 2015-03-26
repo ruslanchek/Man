@@ -10,8 +10,9 @@
 		line-height: 1em
 		color: $dark-text !important
 		transition: background-color .05s
-		+unstyled-link
+		position: relative
 
+		+unstyled-link
 		+breakpoint($bp-iphone)
 			padding: 20px 20px
 
@@ -21,10 +22,12 @@
 		.new
 			background: #E56364
 			border-radius: 3px
-			padding: 1px 4px 0px 3px
+			padding: 1px 4px 0 3px
 			color: #fff
 			margin-left: .5em
 			font-weight: normal
+			position: absolute
+			right: 20px
 
 		i
 			color: $dark-text + 70
@@ -52,6 +55,7 @@
 		margin-bottom: 10px
 		border-radius: 3px
 		transition: all .1s
+		display: block
 
 		&:last-of-type
 			margin-bottom: 0

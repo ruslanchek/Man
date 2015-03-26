@@ -1868,9 +1868,9 @@ body {
 .limiter {
   width: 100%;
   margin: 0 auto;
-  padding: 0 5%;
+  padding: 0 0;
   box-sizing: border-box;
-  max-width: 1200px;
+  max-width: 1000px;
   min-width: 1000px; }
   @media (min-width: 0) and (max-width: 569px) {
     .limiter {
@@ -5103,6 +5103,7 @@ a {
   background-color: #ECF0F1;
   position: relative;
   z-index: 2;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.075);
   overflow: hidden;
   *zoom: 1; }
 
@@ -5142,6 +5143,7 @@ main {
     color: #98adc2 !important;
     -webkit-transition: background-color 0.05s;
             transition: background-color 0.05s;
+    position: relative;
     color: inherit;
     text-decoration: inherit;
     cursor: inherit; }
@@ -5155,10 +5157,12 @@ main {
     .nav-main a .new {
       background: #E56364;
       border-radius: 3px;
-      padding: 1px 4px 0px 3px;
+      padding: 1px 4px 0 3px;
       color: #fff;
       margin-left: 0.5em;
-      font-weight: normal; }
+      font-weight: normal;
+      position: absolute;
+      right: 20px; }
     .nav-main a i {
       color: #def3ff;
       margin-right: 16px;
@@ -5182,7 +5186,8 @@ main {
     margin-bottom: 10px;
     border-radius: 3px;
     -webkit-transition: all 0.1s;
-            transition: all 0.1s; }
+            transition: all 0.1s;
+    display: block; }
     .notifications .item:last-of-type {
       margin-bottom: 0; }
     .notifications .item .title a:hover {
@@ -5252,6 +5257,10 @@ main header {
   padding-right: 96px;
   background-color: #fff;
   height: 48px; }
+  @media (min-width: 0) and (max-width: 569px) {
+    main header {
+      padding-right: 0;
+      height: auto; } }
   main header .search {
     position: relative;
     float: left;
@@ -5276,13 +5285,23 @@ main header {
       height: 48px;
       line-height: 48px;
       border-radius: 0;
-      border: none;
       font-size: 1em;
       height: 48px;
       box-sizing: border-box;
       -webkit-transition: background 0.1s;
               transition: background 0.1s;
       font-family: "PT Sans", sans-serif; }
+      @media (min-width: 0) and (max-width: 569px) {
+        main header .search input {
+          padding-left: 52px; } }
+      main header .search input:-moz-placeholder {
+        color: #ccd1d8; }
+      main header .search input::-moz-placeholder {
+        color: #ccd1d8; }
+      main header .search input:-ms-input-placeholder {
+        color: #ccd1d8; }
+      main header .search input::-webkit-input-placeholder {
+        color: #ccd1d8; }
       @media (min-width: 0) and (max-width: 569px) {
         main header .search input {
           height: 58px; } }
@@ -5296,20 +5315,21 @@ main header {
         color: #5b636d; }
       main header .search input .title:hover {
         color: #5b636d; }
-      main header .search input:-moz-placeholder {
-        color: #ccd1d8; }
-      main header .search input::-moz-placeholder {
-        color: #ccd1d8; }
-      main header .search input:-ms-input-placeholder {
-        color: #ccd1d8; }
-      main header .search input::-webkit-input-placeholder {
-        color: #ccd1d8; }
   main header .btn-group {
     position: absolute;
     top: 0;
     right: 0;
     height: 48px;
     width: 96px; }
+    @media (min-width: 0) and (max-width: 569px) {
+      main header .btn-group:before {
+        content: "";
+        top: 0;
+        left: 0;
+        position: absolute;
+        background: rgba(255, 255, 255, 0.05);
+        height: 58px;
+        width: 1px; } }
     @media (min-width: 0) and (max-width: 569px) {
       main header .btn-group {
         width: 116px;
@@ -5341,8 +5361,9 @@ main header {
       color: #5b636d; }
     @media (min-width: 0) and (max-width: 569px) {
       main header .btn {
-        width: 58px;
-        height: 58px;
+        width: 58px !important;
+        height: 58px !important;
+        line-height: 58px;
         color: #fff; } }
     main header .btn .fa {
       -webkit-transition: color 0.1s;
@@ -5379,8 +5400,18 @@ main header {
       color: #5b636d; }
     main header .btn-wide .title:hover {
       color: #5b636d; }
+    @media (min-width: 0) and (max-width: 569px) {
+      main header .btn-wide {
+        height: 58px;
+        line-height: 58px;
+        width: 100% !important;
+        float: none;
+        padding: 0 20px; } }
     main header .btn-wide .fa {
       margin-right: 10px; }
+      @media (min-width: 0) and (max-width: 569px) {
+        main header .btn-wide .fa {
+          margin-right: 18px; } }
     main header .btn-wide.company {
       width: 35%; }
   main header .selector {
@@ -5389,8 +5420,6 @@ main header {
     line-height: 48px;
     color: #656d77;
     padding: 0 35px 0 17px;
-    box-sizing: border-box;
-    cursor: pointer;
     box-sizing: border-box;
     cursor: pointer;
     -webkit-user-select: none;
@@ -5417,8 +5446,11 @@ main header {
       color: #5b636d; }
     @media (min-width: 0) and (max-width: 569px) {
       main header .selector {
-        float: none !important;
-        width: 100 !important; } }
+        float: none;
+        width: 100% !important;
+        height: 58px;
+        line-height: 58px;
+        padding-left: 20px; } }
     main header .selector.active {
       background: rgba(0, 0, 0, 0.04); }
     main header .selector .arrow {
@@ -5438,6 +5470,9 @@ main header {
         -webkit-transition: color 0.1s;
                 transition: color 0.1s;
         margin-right: 10px; }
+        @media (min-width: 0) and (max-width: 569px) {
+          main header .selector .title .fa {
+            margin-right: 18px; } }
     main header .selector .arrow {
       position: absolute;
       right: 15px;
@@ -5496,6 +5531,10 @@ main header {
   main header .divider-right {
     position: relative;
     height: 48px; }
+    @media (min-width: 0) and (max-width: 569px) {
+      main header .divider-left,
+      main header .divider-right {
+        height: 58px; } }
     main header .divider-left.divider-left:before,
     main header .divider-right.divider-left:before {
       width: 1px;
@@ -5509,7 +5548,8 @@ main header {
       @media (min-width: 0) and (max-width: 569px) {
         main header .divider-left.divider-left:before,
         main header .divider-right.divider-left:before {
-          background: rgba(0, 0, 0, 0.1); } }
+          background: rgba(255, 255, 255, 0.05);
+          height: 58px; } }
     main header .divider-left.divider-right:after,
     main header .divider-right.divider-right:after {
       width: 1px;
@@ -5523,4 +5563,5 @@ main header {
       @media (min-width: 0) and (max-width: 569px) {
         main header .divider-left.divider-right:after,
         main header .divider-right.divider-right:after {
-          background: rgba(0, 0, 0, 0.1); } }
+          background: rgba(255, 255, 255, 0.05);
+          height: 58px; } }

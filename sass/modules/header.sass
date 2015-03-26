@@ -89,6 +89,10 @@ main
 		background-color: #fff
 		height: $height-top
 
+		+breakpoint($bp-iphone)
+			padding-right: 0
+			height: auto
+
 		.search
 			position: relative
 			float: left
@@ -115,12 +119,15 @@ main
 				height: $height-top
 				line-height: $height-top
 				border-radius: 0
-				border: none
 				font-size: 1em
-				+header-input-effects
+
+				+breakpoint($bp-iphone)
+					padding-left: 52px
 
 				+input-placeholder
 					color: $input-color-placeholder
+
+				+header-input-effects
 
 		.btn-group
 			position: absolute
@@ -128,6 +135,16 @@ main
 			right: 0
 			height: $height-top
 			width: $height-top * 2
+
+			&:before
+				+breakpoint($bp-iphone)
+					content: ''
+					top: 0
+					left: 0
+					position: absolute
+					background: rgba(255, 255, 255, .05)
+					height: $height-top-iphone
+					width: 1px
 
 			+breakpoint($bp-iphone)
 				width: $height-top-iphone * 2
@@ -143,8 +160,9 @@ main
 			+header-input-effects
 
 			+breakpoint($bp-iphone)
-				width: $height-top-iphone
-				height: $height-top-iphone
+				width: $height-top-iphone !important
+				height: $height-top-iphone !important
+				line-height: $height-top-iphone
 				color: #fff
 
 			.fa
@@ -169,8 +187,18 @@ main
 			line-height: $height-top
 			+header-input-effects
 
+			+breakpoint($bp-iphone)
+				height: $height-top-iphone
+				line-height: $height-top-iphone
+				width: 100% !important
+				float: none
+				padding: 0 20px
+
 			.fa
 				margin-right: 10px
+
+				+breakpoint($bp-iphone)
+					margin-right: 18px
 
 			&.company
 				width: $width-company
@@ -183,13 +211,16 @@ main
 			padding: 0 35px 0 17px
 			box-sizing: border-box
 			cursor: pointer
-			box-sizing: border-box
-			cursor: pointer
-			user-select: none 
+			user-select: none
+
 			+header-input-effects
+
 			+breakpoint($bp-iphone)
-				float: none !important
-				width: 100 !important
+				float: none
+				width: 100% !important
+				height: $height-top-iphone
+				line-height: $height-top-iphone
+				padding-left: 20px
 
 			&.active
 				background: rgba(0, 0, 0, .04)
@@ -213,6 +244,9 @@ main
 				.fa
 					transition: color .1s
 					margin-right: 10px
+
+					+breakpoint($bp-iphone)
+						margin-right: 18px
 
 			.arrow
 				position: absolute
@@ -279,6 +313,9 @@ main
 			position: relative
 			height: $height-top
 
+			+breakpoint($bp-iphone)
+				height: $height-top-iphone
+
 			=divider-ba
 				width: 1px
 				height: $height-top
@@ -288,18 +325,16 @@ main
 				position: absolute
 				top: 0
 
+				+breakpoint($bp-iphone)
+					background: rgba(255, 255, 255, .05)
+					height: $height-top-iphone
+
 			&.divider-left
 				&:before
 					+divider-ba
 					left: 0
 
-					+breakpoint($bp-iphone)
-						background: rgba(0, 0, 0, .1)
-
 			&.divider-right
 				&:after
 					+divider-ba
 					right: 0
-
-					+breakpoint($bp-iphone)
-						background: rgba(0, 0, 0, .1)
