@@ -1862,7 +1862,8 @@ body {
     body {
       width: 100%;
       min-width: 100%;
-      max-width: 100%; } }
+      max-width: 100%;
+      font-size: 16px; } }
 
 .limiter {
   width: 100%;
@@ -1875,7 +1876,8 @@ body {
     .limiter {
       width: 100%;
       max-width: 100%;
-      min-width: 100%; } }
+      min-width: 100%;
+      padding: 0; } }
 
 .shadowed {
   box-shadow: 0 1px 3px rgba(0, 15, 10, 0.1); }
@@ -5093,6 +5095,10 @@ html, body {
 body {
   background: #e2e6e7 url(../images/pattern.png) top center; }
 
+a {
+  -ms-touch-action: manipulation;
+      touch-action: manipulation; }
+
 .app {
   background-color: #ECF0F1;
   position: relative;
@@ -5107,8 +5113,12 @@ aside {
   float: left; }
   @media (min-width: 0) and (max-width: 569px) {
     aside {
+      height: auto;
       float: none;
       width: 100%; } }
+  @media (min-width: 0) and (max-width: 569px) {
+    aside footer {
+      display: none; } }
 
 main {
   width: 78%;
@@ -5117,12 +5127,17 @@ main {
     main {
       float: none;
       width: 100%; } }
+  main > section {
+    padding: 20px 20px; }
 
 .nav-main {
   font-weight: bold; }
+  @media (min-width: 0) and (max-width: 569px) {
+    .nav-main {
+      font-weight: normal; } }
   .nav-main a {
     display: block;
-    padding: 8px 20px;
+    padding: 10px 20px;
     line-height: 1em;
     color: #98adc2 !important;
     -webkit-transition: background-color 0.05s;
@@ -5132,6 +5147,9 @@ main {
     cursor: inherit; }
     .nav-main a:active, .nav-main a:focus {
       outline: none; }
+    @media (min-width: 0) and (max-width: 569px) {
+      .nav-main a {
+        padding: 20px 20px; } }
     .nav-main a:hover {
       background-color: rgba(255, 255, 255, 0.065); }
     .nav-main a .new {
@@ -5139,7 +5157,6 @@ main {
       border-radius: 3px;
       padding: 1px 4px 0px 3px;
       color: #fff;
-      font-size: 11px;
       margin-left: 0.5em;
       font-weight: normal; }
     .nav-main a i {
@@ -5154,6 +5171,37 @@ main {
       .nav-main a.active i {
         color: #fff; }
 
+.notifications {
+  padding: 15px 20px; }
+  @media (min-width: 0) and (max-width: 569px) {
+    .notifications {
+      display: none; } }
+  .notifications .item {
+    padding: 5px 9px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 10px;
+    border-radius: 3px;
+    -webkit-transition: all 0.1s;
+            transition: all 0.1s; }
+    .notifications .item:last-of-type {
+      margin-bottom: 0; }
+    .notifications .item .title a:hover {
+      color: #6de0ff; }
+    .notifications .item .body {
+      font-size: 12px;
+      color: #c0d5ea; }
+    .notifications .item .date {
+      font-size: 12px;
+      overflow: hidden;
+      height: 0;
+      -webkit-transition: height 0.2s;
+              transition: height 0.2s;
+      color: #8499ae; }
+    .notifications .item:hover {
+      border-color: rgba(255, 255, 255, 0.2); }
+      .notifications .item:hover .date {
+        height: 17px; }
+
 body:after {
   content: "";
   display: block;
@@ -5167,6 +5215,9 @@ body:after {
 
 aside header {
   height: 48px; }
+  @media (min-width: 0) and (max-width: 569px) {
+    aside header {
+      height: 58px; } }
   aside header .logo {
     font-size: 18px;
     font-weight: bold;
@@ -5179,6 +5230,11 @@ aside header {
     background-color: #2F4457;
     -webkit-transition: 0.15s;
             transition: 0.15s; }
+    @media (min-width: 0) and (max-width: 569px) {
+      aside header .logo {
+        height: 58px;
+        line-height: 58px;
+        font-size: 24px; } }
     aside header .logo:hover {
       background-color: #3e5366; }
     aside header .logo:after {
@@ -5200,6 +5256,10 @@ main header {
     position: relative;
     float: left;
     width: 43%; }
+    @media (min-width: 0) and (max-width: 569px) {
+      main header .search {
+        float: none;
+        width: 100%; } }
     main header .search .fa {
       position: absolute;
       top: 50%;
@@ -5223,6 +5283,9 @@ main header {
       -webkit-transition: background 0.1s;
               transition: background 0.1s;
       font-family: "PT Sans", sans-serif; }
+      @media (min-width: 0) and (max-width: 569px) {
+        main header .search input {
+          height: 58px; } }
       main header .search input:hover {
         background: rgba(0, 0, 0, 0.02); }
       main header .search input .fa {
@@ -5247,10 +5310,14 @@ main header {
     right: 0;
     height: 48px;
     width: 96px; }
+    @media (min-width: 0) and (max-width: 569px) {
+      main header .btn-group {
+        width: 116px;
+        height: 58px;
+        color: #fff; } }
   main header .btn {
     float: left;
     width: 48px;
-    height: 48px;
     line-height: 48px;
     text-align: center;
     cursor: pointer;
@@ -5259,6 +5326,9 @@ main header {
     -webkit-transition: background 0.1s;
             transition: background 0.1s;
     font-family: "PT Sans", sans-serif; }
+    @media (min-width: 0) and (max-width: 569px) {
+      main header .btn {
+        height: 58px; } }
     main header .btn:hover {
       background: rgba(0, 0, 0, 0.02); }
     main header .btn .fa {
@@ -5269,10 +5339,17 @@ main header {
       color: #5b636d; }
     main header .btn .title:hover {
       color: #5b636d; }
+    @media (min-width: 0) and (max-width: 569px) {
+      main header .btn {
+        width: 58px;
+        height: 58px;
+        color: #fff; } }
     main header .btn .fa {
       -webkit-transition: color 0.1s;
               transition: color 0.1s; }
     main header .btn#exit:hover .fa {
+      color: #ed5e49; }
+    main header .btn#exit .fa {
       color: #fc6d58; }
   main header .btn-wide {
     padding: 0 17px;
@@ -5289,6 +5366,9 @@ main header {
     -webkit-transition: background 0.1s;
             transition: background 0.1s;
     font-family: "PT Sans", sans-serif; }
+    @media (min-width: 0) and (max-width: 569px) {
+      main header .btn-wide {
+        height: 58px; } }
     main header .btn-wide:hover {
       background: rgba(0, 0, 0, 0.02); }
     main header .btn-wide .fa {
@@ -5322,6 +5402,9 @@ main header {
     -webkit-transition: background 0.1s;
             transition: background 0.1s;
     font-family: "PT Sans", sans-serif; }
+    @media (min-width: 0) and (max-width: 569px) {
+      main header .selector {
+        height: 58px; } }
     main header .selector:hover {
       background: rgba(0, 0, 0, 0.02); }
     main header .selector .fa {
@@ -5332,6 +5415,10 @@ main header {
       color: #5b636d; }
     main header .selector .title:hover {
       color: #5b636d; }
+    @media (min-width: 0) and (max-width: 569px) {
+      main header .selector {
+        float: none !important;
+        width: 100 !important; } }
     main header .selector.active {
       background: rgba(0, 0, 0, 0.04); }
     main header .selector .arrow {
@@ -5373,22 +5460,38 @@ main header {
       -webkit-transition: all 0.1s;
               transition: all 0.1s; }
       main header .selector .drop .drop-inner ul li {
-        height: 32px;
-        line-height: 32px;
+        height: 48px;
+        line-height: 48px;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
         background: #fff;
         padding: 0 17px;
         -webkit-transition: 0.1s;
-                transition: 0.1s; }
+                transition: 0.1s;
+        border-bottom: 1px solid #F2F2F2; }
+        @media (min-width: 0) and (max-width: 569px) {
+          main header .selector .drop .drop-inner ul li {
+            height: 58px;
+            line-height: 58px; } }
+        main header .selector .drop .drop-inner ul li:last-child {
+          border-bottom: none; }
         main header .selector .drop .drop-inner ul li:hover {
           background: #4fc2e5;
           color: #fff; }
     main header .selector:hover .drop,
     main header .selector .opened .drop {
       opacity: 1;
-      height: 160px; }
+      height: 240px; }
+      @media (min-width: 0) and (max-width: 569px) {
+        main header .selector:hover .drop,
+        main header .selector .opened .drop {
+          height: 100vh !important;
+          width: 100vw !important;
+          background-color: #fff;
+          position: fixed;
+          top: 0;
+          left: 0; } }
   main header .divider-left,
   main header .divider-right {
     position: relative;
@@ -5403,6 +5506,10 @@ main header {
       position: absolute;
       top: 0;
       left: 0; }
+      @media (min-width: 0) and (max-width: 569px) {
+        main header .divider-left.divider-left:before,
+        main header .divider-right.divider-left:before {
+          background: rgba(0, 0, 0, 0.1); } }
     main header .divider-left.divider-right:after,
     main header .divider-right.divider-right:after {
       width: 1px;
@@ -5413,3 +5520,7 @@ main header {
       position: absolute;
       top: 0;
       right: 0; }
+      @media (min-width: 0) and (max-width: 569px) {
+        main header .divider-left.divider-right:after,
+        main header .divider-right.divider-right:after {
+          background: rgba(0, 0, 0, 0.1); } }

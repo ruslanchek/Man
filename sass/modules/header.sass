@@ -6,12 +6,18 @@ $header-input-color: $color-dark-gray-light
 $header-input-color-hover: $color-dark-gray-light - 10
 $input-color-placeholder: $color-medium-gray-light
 $height-top: 48px
+$height-top-iphone: 58px
+$dropdown-item-height: 48px
+$dropdown-item-height-iphone: 58px
 
 =header-input-effects
 	height: $height-top
 	box-sizing: border-box
 	transition: background .1s
 	font-family: $base-font-family
+
+	+breakpoint($bp-iphone)
+		height: $height-top-iphone
 
 	&:hover
 		background: rgba(0, 0, 0, .02)
@@ -43,6 +49,9 @@ aside
 	header
 		height: $height-top
 
+		+breakpoint($bp-iphone)
+			height: $height-top-iphone
+
 		.logo
 			font-size: 18px
 			font-weight: bold
@@ -54,6 +63,11 @@ aside
 			line-height: $height-top
 			background-color: #2F4457
 			transition: $animation-component-duration
+
+			+breakpoint($bp-iphone)
+				height: $height-top-iphone
+				line-height: $height-top-iphone
+				font-size: 24px
 
 			&:hover
 				background-color: #2F4457 + 15
@@ -80,6 +94,10 @@ main
 			float: left
 			width: $width-search
 
+			+breakpoint($bp-iphone)
+				float: none
+				width: 100%
+
 			.fa
 				position: absolute
 				top: 50%
@@ -99,11 +117,10 @@ main
 				border-radius: 0
 				border: none
 				font-size: 1em
-
 				+header-input-effects
+
 				+input-placeholder
 					color: $input-color-placeholder
-
 
 		.btn-group
 			position: absolute
@@ -112,20 +129,33 @@ main
 			height: $height-top
 			width: $height-top * 2
 
+			+breakpoint($bp-iphone)
+				width: $height-top-iphone * 2
+				height: $height-top-iphone
+				color: #fff
+
 		.btn
 			float: left
 			width: $height-top
-			height: $height-top
 			line-height: $height-top
 			text-align: center
 			cursor: pointer
 			+header-input-effects
 
+			+breakpoint($bp-iphone)
+				width: $height-top-iphone
+				height: $height-top-iphone
+				color: #fff
+
 			.fa
 				transition: color .1s
 
-			&#exit:hover .fa
-				color: $color-heat-light
+			&#exit 
+				&:hover
+					.fa
+						color: $color-heat-light - 15
+				.fa
+					color: $color-heat-light
 
 		.btn-wide
 			padding: 0 17px
@@ -146,8 +176,6 @@ main
 				width: $width-company
 
 		.selector
-			$height: 32px
-
 			float: left
 			height: $height-top
 			line-height: $height-top
@@ -159,6 +187,9 @@ main
 			cursor: pointer
 			user-select: none 
 			+header-input-effects
+			+breakpoint($bp-iphone)
+				float: none !important
+				width: 100 !important
 
 			&.active
 				background: rgba(0, 0, 0, .04)
@@ -208,14 +239,22 @@ main
 				.drop-inner
 					ul
 						li
-							height: $height
-							line-height: $height
+							height: $dropdown-item-height
+							line-height: $dropdown-item-height
 							white-space: nowrap
 							overflow: hidden
 							text-overflow: ellipsis
 							background: #fff
 							padding: 0 17px
 							transition: .1s
+							border-bottom: 1px solid $divider-color
+
+							+breakpoint($bp-iphone)
+								height: $dropdown-item-height-iphone
+								line-height: $dropdown-item-height-iphone
+
+							&:last-child
+								border-bottom: none
 
 							&:hover
 								background: $color-cold-light
@@ -225,7 +264,15 @@ main
 			.opened
 				.drop
 					opacity: 1
-					height: $height * 5
+					height: $dropdown-item-height * 5
+
+					+breakpoint($bp-iphone)
+						height: 100vh !important
+						width: 100vw !important
+						background-color: #fff
+						position: fixed
+						top: 0
+						left: 0
 
 		.divider-left,
 		.divider-right
@@ -246,7 +293,13 @@ main
 					+divider-ba
 					left: 0
 
+					+breakpoint($bp-iphone)
+						background: rgba(0, 0, 0, .1)
+
 			&.divider-right
 				&:after
 					+divider-ba
 					right: 0
+
+					+breakpoint($bp-iphone)
+						background: rgba(0, 0, 0, .1)

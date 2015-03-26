@@ -1,6 +1,9 @@
 body
 	background: #ECF0F1 - 10 url(../images/pattern.png) top center
 
+a
+	touch-action: manipulation
+
 .app
 	background-color: #ECF0F1
 	position: relative
@@ -14,8 +17,13 @@ aside
 	float: left
 
 	+breakpoint($bp-iphone)
+		height: auto
 		float: none
 		width: 100%
+
+	footer
+		+breakpoint($bp-iphone)
+			display: none
 
 main
 	width: 78%
@@ -24,3 +32,6 @@ main
 	+breakpoint($bp-iphone)
 		float: none
 		width: 100%
+	
+	>section
+		padding: $padding-component-vertical $padding-component-side

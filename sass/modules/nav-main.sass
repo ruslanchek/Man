@@ -1,13 +1,19 @@
 .nav-main
 	font-weight: bold
 
+	+breakpoint($bp-iphone)
+		font-weight: normal
+
 	a
 		display: block
-		padding: 8px 20px
+		padding: 10px 20px
 		line-height: 1em
 		color: $dark-text !important
 		transition: background-color .05s
 		+unstyled-link
+
+		+breakpoint($bp-iphone)
+			padding: 20px 20px
 
 		&:hover
 			background-color: rgba(255, 255, 255, .065)
@@ -17,7 +23,6 @@
 			border-radius: 3px
 			padding: 1px 4px 0px 3px
 			color: #fff
-			font-size: 11px
 			margin-left: .5em
 			font-weight: normal
 
@@ -34,3 +39,41 @@
 
 			i
 				color: #fff
+
+.notifications
+	padding: 15px 20px
+
+	+breakpoint($bp-iphone)
+		display: none
+
+	.item
+		padding: 5px 9px
+		border: 1px solid $aside-lines-color
+		margin-bottom: 10px
+		border-radius: 3px
+		transition: all .1s
+
+		&:last-of-type
+			margin-bottom: 0
+
+		.title
+			a
+				&:hover
+					color: $color-cold-light + 30
+
+		.body
+			font-size: 12px
+			color: $dark-text + 40
+
+		.date
+			font-size: 12px
+			overflow: hidden
+			height: 0
+			transition: height .2s
+			color: $dark-text - 20 
+
+		&:hover
+			border-color: rgba(255, 255, 255, .2)
+
+			.date
+				height: 17px
