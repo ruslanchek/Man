@@ -1857,7 +1857,7 @@ body {
   color: #434a53;
   line-height: 1.5em;
   font-size: 14px;
-  min-width: 1000px; }
+  min-width: 569px; }
   @media (min-width: 0) and (max-width: 569px) {
     body {
       width: 100%;
@@ -1867,17 +1867,23 @@ body {
 
 .limiter {
   width: 100%;
-  margin: 0 auto;
-  padding: 0 0;
-  box-sizing: border-box;
   max-width: 1000px;
-  min-width: 1000px; }
-  @media (min-width: 0) and (max-width: 569px) {
+  min-width: 569px;
+  padding: 0;
+  margin: 0 auto;
+  box-sizing: border-box; }
+  @media (min-width: 0) and (min-width: 0) and (max-width: 569px) {
     .limiter {
-      width: 100%;
-      max-width: 100%;
       min-width: 100%;
-      padding: 0; } }
+      max-width: 100%; } }
+  @media (min-width: 570px) and (max-width: 1199px) {
+    .limiter {
+      min-width: 1000px;
+      max-width: 100%;
+      font-size: 14px; } }
+  @media (min-width: 1200px) {
+    .limiter {
+      max-width: 1200px; } }
 
 .shadowed {
   box-shadow: 0 1px 3px rgba(0, 15, 10, 0.1); }
@@ -5093,7 +5099,7 @@ html, body {
     opacity: 0.75; }
 
 body {
-  background: #e2e6e7 url(../images/pattern.png) top center; }
+  background: #354d62; }
 
 a {
   -ms-touch-action: manipulation;
@@ -5103,7 +5109,6 @@ a {
   background-color: #ECF0F1;
   position: relative;
   z-index: 2;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.075);
   overflow: hidden;
   *zoom: 1; }
 
@@ -5117,9 +5122,16 @@ aside {
       height: auto;
       float: none;
       width: 100%; } }
-  @media (min-width: 0) and (max-width: 569px) {
-    aside footer {
-      display: none; } }
+  aside footer {
+    padding: 15px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: #c0d5ea; }
+    aside footer .grid [class^="col-"],
+    aside footer .grid [class*=" col-"] {
+      margin: 0; }
+    @media (min-width: 0) and (max-width: 569px) {
+      aside footer {
+        display: none; } }
 
 main {
   width: 78%;
@@ -5176,7 +5188,8 @@ main {
         color: #fff; }
 
 .notifications {
-  padding: 15px 20px; }
+  padding: 15px 20px;
+  font-size: 0.825rem; }
   @media (min-width: 0) and (max-width: 569px) {
     .notifications {
       display: none; } }
@@ -5193,10 +5206,8 @@ main {
     .notifications .item .title a:hover {
       color: #6de0ff; }
     .notifications .item .body {
-      font-size: 12px;
       color: #c0d5ea; }
     .notifications .item .date {
-      font-size: 12px;
       overflow: hidden;
       height: 0;
       -webkit-transition: height 0.2s;
@@ -5207,19 +5218,8 @@ main {
       .notifications .item:hover .date {
         height: 17px; }
 
-body:after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  height: 48px;
-  left: 0;
-  z-index: 1;
-  width: 100%;
-  background-color: #fff; }
-
 aside header {
-  height: 48px; }
+  height: 52px; }
   @media (min-width: 0) and (max-width: 569px) {
     aside header {
       height: 58px; } }
@@ -5230,8 +5230,8 @@ aside header {
     padding-left: 70px;
     color: #fff !important;
     display: block;
-    height: 48px;
-    line-height: 48px;
+    height: 52px;
+    line-height: 52px;
     background-color: #2F4457;
     -webkit-transition: 0.15s;
             transition: 0.15s; }
@@ -5254,9 +5254,9 @@ aside header {
       left: 20px; }
 
 main header {
-  padding-right: 96px;
+  padding-right: 104px;
   background-color: #fff;
-  height: 48px; }
+  height: 52px; }
   @media (min-width: 0) and (max-width: 569px) {
     main header {
       padding-right: 0;
@@ -5282,11 +5282,11 @@ main header {
       width: 100%;
       outline: none;
       color: #656d77;
-      height: 48px;
-      line-height: 48px;
+      height: 52px;
+      line-height: 52px;
       border-radius: 0;
       font-size: 1em;
-      height: 48px;
+      height: 52px;
       box-sizing: border-box;
       -webkit-transition: background 0.1s;
               transition: background 0.1s;
@@ -5319,8 +5319,8 @@ main header {
     position: absolute;
     top: 0;
     right: 0;
-    height: 48px;
-    width: 96px; }
+    height: 52px;
+    width: 104px; }
     @media (min-width: 0) and (max-width: 569px) {
       main header .btn-group:before {
         content: "";
@@ -5340,11 +5340,11 @@ main header {
 
   main header .btn {
     float: left;
-    width: 48px;
-    line-height: 48px;
+    width: 52px;
+    line-height: 52px;
     text-align: center;
     cursor: pointer;
-    height: 48px;
+    height: 52px;
     box-sizing: border-box;
     -webkit-transition: background 0.1s;
             transition: background 0.1s;
@@ -5383,9 +5383,9 @@ main header {
     color: #656d77;
     display: block;
     float: left;
-    height: 48px;
-    line-height: 48px;
-    height: 48px;
+    height: 52px;
+    line-height: 52px;
+    height: 52px;
     box-sizing: border-box;
     -webkit-transition: background 0.1s;
             transition: background 0.1s;
@@ -5419,8 +5419,8 @@ main header {
       width: 35%; }
   main header .selector {
     float: left;
-    height: 48px;
-    line-height: 48px;
+    height: 52px;
+    line-height: 52px;
     color: #656d77;
     padding: 0 35px 0 17px;
     box-sizing: border-box;
@@ -5429,7 +5429,7 @@ main header {
        -moz-user-select: none;
         -ms-user-select: none;
             user-select: none;
-    height: 48px;
+    height: 52px;
     box-sizing: border-box;
     -webkit-transition: background 0.1s;
             transition: background 0.1s;
@@ -5490,7 +5490,7 @@ main header {
       height: 0;
       opacity: 0;
       position: absolute;
-      top: 48px;
+      top: 52px;
       left: 0;
       z-index: 1000;
       width: 100%;
@@ -5501,8 +5501,8 @@ main header {
       -webkit-transition: all 0.1s;
               transition: all 0.1s; }
       main header .selector .drop .drop-inner ul li {
-        height: 48px;
-        line-height: 48px;
+        height: 52px;
+        line-height: 52px;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -5523,7 +5523,7 @@ main header {
     main header .selector:hover .drop,
     main header .selector .opened .drop {
       opacity: 1;
-      height: 240px; }
+      height: 260px; }
       @media (min-width: 0) and (max-width: 569px) {
         main header .selector:hover .drop,
         main header .selector .opened .drop {
@@ -5536,7 +5536,7 @@ main header {
   main header .divider-left,
   main header .divider-right {
     position: relative;
-    height: 48px; }
+    height: 52px; }
     @media (min-width: 0) and (max-width: 569px) {
       main header .divider-left,
       main header .divider-right {
@@ -5544,7 +5544,7 @@ main header {
     main header .divider-left.divider-left:before,
     main header .divider-right.divider-left:before {
       width: 1px;
-      height: 48px;
+      height: 52px;
       background: #F2F2F2;
       content: "";
       display: block;
@@ -5559,7 +5559,7 @@ main header {
     main header .divider-left.divider-right:after,
     main header .divider-right.divider-right:after {
       width: 1px;
-      height: 48px;
+      height: 52px;
       background: #F2F2F2;
       content: "";
       display: block;

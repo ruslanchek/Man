@@ -1,5 +1,5 @@
 body
-	background: #ECF0F1 - 10 url(../images/pattern.png) top center
+	background: #354d62
 
 a
 	touch-action: manipulation
@@ -8,7 +8,6 @@ a
 	background-color: #ECF0F1
 	position: relative
 	z-index: 2
-	box-shadow: 0 0 20px rgba(0, 0, 0, .075)
 	+clearfix
 
 aside
@@ -23,6 +22,15 @@ aside
 		width: 100%
 
 	footer
+		padding: 15px 20px
+		border-top: 1px solid $aside-lines-color
+		color: $dark-text + 40
+
+		.grid
+			[class^="col-"],
+			[class*=" col-"]
+				margin: 0
+
 		+breakpoint($bp-iphone)
 			display: none
 
