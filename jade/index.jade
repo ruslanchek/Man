@@ -3,6 +3,8 @@ extends _layout
 block content
 	.limiter
 		.app
+			a.open-menu(href="#"): i.fa.fa-bars
+
 			aside
 				header
 					a.logo(href="#") Менеджер
@@ -52,11 +54,17 @@ block content
 							.date Сегодня, в 7:41
 
 				footer
-					a(href="#") Инструкция
-					|&nbsp;
-					a(href="#") Поддержка
+					.menu
+						a(href="#")
+							i.fa.fa-question
+							|&nbsp;
+							|Инструкция
+						a(href="#")
+							i.fa.fa-user-md
+							|&nbsp;
+							|Поддержка
 
-					div Менеджер &copy; 2015
+					.copy &copy; 2015 Менеджер
 
 			main
 				header
@@ -90,4 +98,4 @@ block content
 							i.fa.fa-power-off
 
 				section Section
-				footer |Footer is here
+				footer

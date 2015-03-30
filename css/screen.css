@@ -5099,7 +5099,7 @@ html, body {
     opacity: 0.75; }
 
 body {
-  background: #354d62; }
+  background-color: #2b3e4f; }
 
 a {
   -ms-touch-action: manipulation;
@@ -5111,50 +5111,104 @@ a {
   z-index: 2;
   overflow: hidden;
   *zoom: 1; }
+  .app .open-menu {
+    display: none; }
+    @media (min-width: 0) and (max-width: 569px) {
+      .app .open-menu {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        color: #fff;
+        z-index: 10;
+        font-size: 1.75rem; } }
 
 aside {
-  background-color: #485D70;
+  background-color: #354d62;
   height: 100vh;
   width: 22%;
-  float: left; }
+  float: left;
+  position: relative; }
   @media (min-width: 0) and (max-width: 569px) {
     aside {
       height: auto;
       float: none;
       width: 100%; } }
   aside footer {
+    height: 1.4em;
+    width: 100%;
     padding: 15px 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    color: #c0d5ea; }
-    aside footer .grid [class^="col-"],
-    aside footer .grid [class*=" col-"] {
-      margin-bottom: 0; }
+    background-color: rgba(255, 255, 255, 0.04);
+    color: #c0d5ea;
+    position: absolute;
+    bottom: 0; }
+    aside footer .copy {
+      opacity: 1;
+      -webkit-transform: scale(1);
+          -ms-transform: scale(1);
+              transform: scale(1);
+      -webkit-transition: 0.2s;
+              transition: 0.2s;
+      position: absolute; }
+    aside footer .menu {
+      opacity: 0;
+      -webkit-transform: scale(0);
+          -ms-transform: scale(0);
+              transform: scale(0);
+      -webkit-transition: 0.2s;
+              transition: 0.2s;
+      position: absolute; }
+      aside footer .menu a {
+        margin-right: 3ex; }
+      aside footer .menu i {
+        color: #c0d5ea; }
+    aside footer:hover .copy {
+      opacity: 0;
+      -webkit-transform: scale(0);
+          -ms-transform: scale(0);
+              transform: scale(0); }
+    aside footer:hover .menu {
+      opacity: 1;
+      -webkit-transform: scale(1);
+          -ms-transform: scale(1);
+              transform: scale(1); }
     @media (min-width: 0) and (max-width: 569px) {
       aside footer {
         display: none; } }
 
 main {
   width: 78%;
-  float: left; }
+  float: left;
+  height: 100vh;
+  position: relative; }
   @media (min-width: 0) and (max-width: 569px) {
     main {
       float: none;
-      width: 100%; } }
+      width: 100%;
+      height: auto; } }
   main > section {
     padding: 20px 20px; }
+  main footer {
+    background-color: #e2e6e7;
+    height: 1.4em;
+    width: 100%;
+    padding: 15px 20px;
+    position: absolute;
+    bottom: 0; }
 
 .nav-main {
   font-weight: bold; }
   @media (min-width: 0) and (max-width: 569px) {
     .nav-main {
+      display: none;
       font-weight: normal; } }
   .nav-main a {
     display: block;
     padding: 10px 20px;
     line-height: 1em;
     color: #98adc2 !important;
-    -webkit-transition: background-color 0.05s;
-            transition: background-color 0.05s;
+    -webkit-transition: background-color 0.15s;
+            transition: background-color 0.15s;
     position: relative;
     color: inherit;
     text-decoration: inherit;
@@ -5165,7 +5219,7 @@ main {
       .nav-main a {
         padding: 20px 20px; } }
     .nav-main a:hover {
-      background-color: rgba(255, 255, 255, 0.065); }
+      background-color: rgba(255, 255, 255, 0.04); }
     .nav-main a .new {
       background: #E56364;
       border-radius: 3px;
@@ -5219,7 +5273,8 @@ main {
         height: 17px; }
 
 aside header {
-  height: 52px; }
+  height: 52px;
+  background-color: #2F4457; }
   @media (min-width: 0) and (max-width: 569px) {
     aside header {
       height: 58px; } }
@@ -5232,16 +5287,31 @@ aside header {
     display: block;
     height: 52px;
     line-height: 52px;
-    background-color: #2F4457;
-    -webkit-transition: 0.15s;
-            transition: 0.15s; }
+    -webkit-transition: 0.05s;
+            transition: 0.05s; }
+    aside header .logo:before {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      z-index: 2;
+      background-color: rgba(255, 255, 255, 0.04);
+      -webkit-transition: 0.05s;
+              transition: 0.05s; }
     @media (min-width: 0) and (max-width: 569px) {
       aside header .logo {
         height: 58px;
         line-height: 58px;
-        font-size: 22px; } }
-    aside header .logo:hover {
-      background-color: #3e5366; }
+        font-size: 22px;
+        width: 50%; }
+        aside header .logo:before {
+          display: none; } }
+    aside header .logo:hover:before {
+      opacity: 1; }
     aside header .logo:after {
       content: "";
       background: url(../images/logo.svg);
@@ -5260,7 +5330,8 @@ main header {
   @media (min-width: 0) and (max-width: 569px) {
     main header {
       padding-right: 0;
-      height: auto; } }
+      height: auto;
+      display: none; } }
   main header .search {
     position: relative;
     float: left;

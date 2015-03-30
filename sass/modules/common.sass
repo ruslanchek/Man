@@ -1,5 +1,5 @@
 body
-	background: #354d62
+	background-color: #2b3e4f
 
 a
 	touch-action: manipulation
@@ -10,11 +10,24 @@ a
 	z-index: 2
 	+clearfix
 
+	.open-menu
+		display: none
+
+		+breakpoint($bp-iphone)
+			display: block
+			position: absolute
+			top: 15px
+			right: 20px
+			color: #fff
+			z-index: 10
+			font-size: 1.75rem
+
 aside
-	background-color: #485D70
+	background-color: #354d62
 	height: 100vh
 	width: 22%
 	float: left
+	position: relative
 
 	+breakpoint($bp-iphone)
 		height: auto
@@ -22,14 +35,40 @@ aside
 		width: 100%
 
 	footer
+		height: 1.4em
+		width: 100%
 		padding: 15px 20px
-		border-top: 1px solid $aside-lines-color
+		background-color: rgba(255, 255, 255, .04)
 		color: $dark-text + 40
+		position: absolute
+		bottom: 0
 
-		.grid
-			[class^="col-"],
-			[class*=" col-"]
-				margin-bottom: 0
+		.copy
+			opacity: 1
+			transform: scale(1)
+			transition: .2s
+			position: absolute
+
+		.menu
+			opacity: 0
+			transform: scale(0)
+			transition: .2s
+			position: absolute
+
+			a
+				margin-right: 3ex
+
+			i
+				color: $dark-text + 40
+
+		&:hover
+			.copy
+				opacity: 0
+				transform: scale(0)
+
+			.menu
+				opacity: 1
+				transform: scale(1)
 
 		+breakpoint($bp-iphone)
 			display: none
@@ -37,10 +76,21 @@ aside
 main
 	width: 78%
 	float: left
+	height: 100vh
+	position: relative
 
 	+breakpoint($bp-iphone)
 		float: none
 		width: 100%
+		height: auto
 	
 	>section
 		padding: $padding-component-vertical $padding-component-side
+
+	footer
+		background-color: #ECF0F1 - 10
+		height: 1.4em
+		width: 100%
+		padding: 15px 20px
+		position: absolute
+		bottom: 0

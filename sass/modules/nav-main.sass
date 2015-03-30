@@ -2,6 +2,7 @@
 	font-weight: bold
 
 	+breakpoint($bp-iphone)
+		display: none
 		font-weight: normal
 
 	a
@@ -9,15 +10,16 @@
 		padding: 10px 20px
 		line-height: 1em
 		color: $dark-text !important
-		transition: background-color .05s
+		transition: background-color $animation-component-duration
 		position: relative
 
 		+unstyled-link
+
 		+breakpoint($bp-iphone)
 			padding: 20px 20px
 
 		&:hover
-			background-color: rgba(255, 255, 255, .065)
+			background-color: rgba(255, 255, 255, .04)
 
 		.new
 			background: #E56364

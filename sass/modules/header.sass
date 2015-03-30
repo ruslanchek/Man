@@ -24,6 +24,7 @@
 aside
 	header
 		height: $height-top
+		background-color: #2F4457
 
 		+breakpoint($bp-iphone)
 			height: $height-top-iphone
@@ -37,16 +38,33 @@ aside
 			display: block
 			height: $height-top
 			line-height: $height-top
-			background-color: #2F4457
-			transition: $animation-component-duration
+			transition: .05s
+
+			&:before
+				display: block
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				opacity: 0
+				z-index: 2
+				background-color: rgba(255, 255, 255, .04)
+				transition: .05s
 
 			+breakpoint($bp-iphone)
 				height: $height-top-iphone
 				line-height: $height-top-iphone
 				font-size: 22px
+				width: 50%
+
+				&:before
+					display: none
 
 			&:hover
-				background-color: #2F4457 + 15
+				&:before
+					opacity: 1
 
 			&:after
 				content: ''
@@ -65,9 +83,13 @@ main
 		background-color: #fff
 		height: $height-top
 
+		.open-menu
+
+
 		+breakpoint($bp-iphone)
 			padding-right: 0
 			height: auto
+			display: none
 
 		.search
 			position: relative
