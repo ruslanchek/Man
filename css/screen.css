@@ -5128,7 +5128,7 @@ aside {
     color: #c0d5ea; }
     aside footer .grid [class^="col-"],
     aside footer .grid [class*=" col-"] {
-      margin: 0; }
+      margin-bottom: 0; }
     @media (min-width: 0) and (max-width: 569px) {
       aside footer {
         display: none; } }
