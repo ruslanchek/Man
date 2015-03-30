@@ -5117,11 +5117,15 @@ a {
       .app .open-menu {
         display: block;
         position: absolute;
-        top: 15px;
-        right: 20px;
+        top: 0;
+        right: 0;
         color: #fff;
         z-index: 10;
-        font-size: 1.75rem; } }
+        font-size: 1.75rem;
+        width: 66px;
+        height: 58px;
+        text-align: center;
+        line-height: 58px; } }
 
 aside {
   background-color: #354d62;
@@ -5135,10 +5139,11 @@ aside {
       float: none;
       width: 100%; } }
   aside footer {
-    height: 1.4em;
+    height: 52px;
     width: 100%;
     padding: 15px 20px;
-    background-color: rgba(255, 255, 255, 0.04);
+    box-sizing: border-box;
+    background-color: #3E5467;
     color: #c0d5ea;
     position: absolute;
     bottom: 0; }
@@ -5190,11 +5195,13 @@ main {
     padding: 20px 20px; }
   main footer {
     background-color: #e2e6e7;
-    height: 1.4em;
+    height: 52px;
     width: 100%;
     padding: 15px 20px;
+    box-sizing: border-box;
     position: absolute;
-    bottom: 0; }
+    bottom: 0;
+    color: #a1a5a6; }
 
 .nav-main {
   font-weight: bold; }
