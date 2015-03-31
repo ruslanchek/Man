@@ -5203,6 +5203,9 @@ main {
     bottom: 0;
     color: #a1a5a6; }
 
+h1 span {
+  font-weight: normal; }
+
 .nav-main {
   font-weight: bold; }
   @media (min-width: 0) and (max-width: 569px) {
@@ -5649,3 +5652,12 @@ main header {
         main header .divider-right.divider-right:after {
           background: rgba(255, 255, 255, 0.05);
           height: 58px; } }
+
+.list .item {
+  background: #fff;
+  border-radius: 5px;
+  padding: 20px; }
+  .list .item .title {
+    font-weight: bold; }
+    .list .item .title span {
+      color: #656d77; }
